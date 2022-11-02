@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/Courses"
+        android:title="Khoá học"
+        android:icon="@drawable/ic_courses" />
+
+    <item android:id="@+id/Assignment"
+        android:title="Bài tập"
+        android:icon="@drawable/ic_assignment1" />
+
+    <item android:id="@+id/Camera"
+        android:title="" />
+
+    <item android:id="@+id/Community"
+        android:title="Cộng đồng"
+        android:icon="@drawable/ic_community2" />
+
+    <item android:id="@+id/Profile"
+        android:title="Cá nhân"
+        android:icon="@drawable/profile" />
+</menu>
