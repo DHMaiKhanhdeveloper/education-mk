@@ -1,8 +1,10 @@
-package com.example.educationapp;
+package com.example.educationapp.intro;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.educationapp.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 

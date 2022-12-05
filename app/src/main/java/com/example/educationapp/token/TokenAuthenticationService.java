@@ -1,4 +1,4 @@
-package com.example.educationapp;
+package com.example.educationapp.token;
 
 import java.util.Date;
 

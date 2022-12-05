@@ -1,4 +1,4 @@
-package com.example.educationapp;
+package com.example.educationapp.intro;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,6 +7,12 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.example.educationapp.R;
+import com.example.educationapp.fragments.AssignmentFragment;
+import com.example.educationapp.fragments.CameraFragment;
+import com.example.educationapp.fragments.CommunityFragment;
+import com.example.educationapp.fragments.CoursesFragment;
+import com.example.educationapp.fragments.ProfileFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -19,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private AssignmentFragment assignmentFragment = new AssignmentFragment();
     private CoursesFragment coursesFragment = new CoursesFragment();
     private CommunityFragment communityFragment = new CommunityFragment();
-    private  ProfileFragment profileFragment = new ProfileFragment();
+    private ProfileFragment profileFragment = new ProfileFragment();
     private CameraFragment cameraFragment = new CameraFragment();
     private FloatingActionButton floatingActionButton;
     @Override

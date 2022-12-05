@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".intro.LoginActivity"
     android:background="#EBFEFB"
     android:focusableInTouchMode="true"
     android:gravity="center"
@@ -34,9 +34,9 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
+                    android:text="Bạn đã \nsẵn sàng \nđăng nhập\n nào!!!\n"
+                    android:textSize="20dp" />
 
-                    android:text="Already \nhave an \nAccount?" />
-                <!--                    style="@style/viewParent.headerText.NoMode"-->
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -61,9 +61,9 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="12sp"
                 android:background="@drawable/edittext_background"
-                android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+                android:drawableStart="@drawable/ic_baseline_email_24"
                 android:ems="10"
-                android:hint="Enter Your Email"
+                android:hint="Nhập email "
                 android:inputType="textPersonName"
                 android:padding="12dp"
                 android:textSize="18sp" />
@@ -81,13 +81,14 @@
 
 
             <EditText
-                android:id="@+id/editText_login_doctor_password"
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView_login_password"
                 android:background="@drawable/edittext_background"
+                android:drawableLeft="@drawable/lock"
                 android:drawableRight="@drawable/ic_baseline_visibility_off_24"
-                android:hint="Enter Your Password"
+                android:hint="Nhập mật khẩu"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textSize="16dp" />
@@ -96,7 +97,7 @@
                 style="@style/viewParent"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
-                android:text="Forgot Password?"
+                android:text="Quên mật khẩu"
                 android:textColor="@color/primaryTextColor"
                 android:textSize="@dimen/newsMoreTextSize" />
 
@@ -109,17 +110,17 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="70dp"
                 android:background="@drawable/background_patientp2"
-                android:text="Sign In"
+                android:text="Đăng Nhập"
                 android:textColor="@color/white" />
 
             <TextView
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin"
                 android:onClick="onLoginClick"
-                android:text="New user? Register Now"
+                android:text="Bạn không có tài khoản, Hãy đăng kí "
                 android:textAlignment="center"
                 android:textColor="@color/themeColor"
-                android:textSize="17sp"
+                android:textSize="15sp"
                 android:textStyle="bold" />
 
 
@@ -141,7 +142,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="6"
-                    android:text="Use other Methods"
+                    android:text="Phương thức đăng nhập khác"
                     android:textAlignment="center"
                     android:textSize="12sp" />
 
@@ -250,4 +251,12 @@
         android:layout_marginRight="11dp"
         android:layout_marginBottom="10dp"
         android:onClick="onLoginClick"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/progress_bar"
+        android:visibility="gone" />
 </RelativeLayout>

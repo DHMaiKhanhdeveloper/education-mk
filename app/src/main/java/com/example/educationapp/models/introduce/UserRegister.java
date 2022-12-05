@@ -1,14 +1,18 @@
-package com.example.educationapp.models;
+package com.example.educationapp.models.introduce;
 
-public class UserRegiser {
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
+public class UserRegister implements Serializable {
+    @SerializedName("username")
     private String userName;
     private String job;
     private String email;
     private String phone;
     private String password;
 
-
-    public UserRegiser(String userName, String job, String email, String phone, String password) {
+    public UserRegister(String userName, String job, String email, String phone, String password) {
         this.userName = userName;
         this.job = job;
         this.email = email;
@@ -58,7 +62,7 @@ public class UserRegiser {
 
     @Override
     public String toString() {
-        return "UserRegiser{" +
+        return "User{" +
                 "userName='" + userName + '\'' +
                 ", job='" + job + '\'' +
                 ", email='" + email + '\'' +
@@ -66,7 +70,4 @@ public class UserRegiser {
                 ", password='" + password + '\'' +
                 '}';
     }
-
-
-
 }

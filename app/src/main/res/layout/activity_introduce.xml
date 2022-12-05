@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EBFCFB"
-    tools:context=".IntroduceActivity">
+    tools:context=".intro.IntroduceActivity">
 
 
     <ImageView
@@ -65,7 +65,7 @@
         android:layout_marginTop="60dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_background"
-        android:text="Login"
+        android:text="Đăng nhập"
         android:textColor="#ffffff"
         android:textSize="25dp"
         android:textStyle="bold"
@@ -82,7 +82,7 @@
         android:layout_marginTop="144dp"
         android:layout_marginRight="35dp"
         android:background="@drawable/button_background"
-        android:text="SignUp"
+        android:text="Đăng kí"
         android:textColor="#ffffff"
         android:textSize="25dp"
         android:textStyle="bold"

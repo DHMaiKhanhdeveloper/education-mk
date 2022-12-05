@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".intro.RegisterActivity"
     android:background="@color/register_bk_color"
     android:focusableInTouchMode="true"
     android:gravity="center"
@@ -32,7 +32,7 @@
                     android:layout_alignParentLeft="true"
                     style="@style/viewParent.headerText.NoMode"
                     android:textColor="@color/whiteTextColor"
-                    android:text="Here’s\nyour first\nstep with \nus! "/>
+                    android:text="Vui lòng nhập\nthông tin\nchi tiết\ncủa bạn\nđể đăng ký "/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -59,7 +59,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="6dp"
-                        android:text="Name"
+                        android:text="Họ và Tên"
                         android:textColor="@color/themeColor"
                         android:textSize="16sp" />
 
@@ -69,7 +69,8 @@
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
                         android:background="@drawable/border2"
-                        android:hint="Enter your name"
+                        android:drawableStart="@drawable/ic_baseline_person_24"
+                        android:hint="Nhập họ và tên"
                         android:padding="10dp"
                         android:textSize="16dp" />
                     <TextView
@@ -78,19 +79,42 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="6dp"
-                        android:text="Job"
+                        android:text="Nghề nghiệp"
                         android:textColor="@color/themeColor"
                         android:textSize="16sp" />
 
-                    <EditText
-                        android:id="@+id/edt_job"
+                    <RadioGroup
+                        android:layout_marginTop="5dp"
+                        android:id="@+id/radio_group_register_job"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:background="@drawable/border2"
-                        android:hint="Enter your job"
-                        android:padding="10dp"
-                        android:textSize="16dp" />
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radio_hoc_sinh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Học Sinh"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radio_thay_co"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Thầy/Cô Giáo"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+                        <RadioButton
+                            android:id="@+id/radio_gia_su"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="Gia Sư"
+                            android:textColor="#555555"
+                            android:textSize="14sp" />
+                    </RadioGroup>
                     <TextView
                         android:id="@+id/tv_email"
                         android:layout_width="match_parent"
@@ -106,8 +130,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border2"
-                        android:hint="Enter your email"
+                        android:drawableStart="@drawable/ic_baseline_email_24"
+                        android:hint="Nhập email"
                         android:inputType="textEmailAddress"
+
                         android:padding="10dp"
                         android:textSize="16dp" />
                     <TextView
@@ -116,7 +142,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="6dp"
-                        android:text="Phone"
+                        android:text="Số điện thoại"
                         android:textColor="@color/themeColor"
                         android:textSize="16sp" />
 
@@ -125,7 +151,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border2"
-                        android:hint="Enter your phone"
+                        android:drawableStart="@drawable/ic_baseline_phone_android_24"
+                        android:hint="Nhập số điện thoại"
                         android:inputType="phone"
                         android:padding="10dp"
                         android:textSize="16sp" />
@@ -135,7 +162,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="6dp"
-                        android:text="Password"
+                        android:text="Mật khẩu"
                         android:textColor="@color/themeColor"
                         android:textSize="16sp" />
 
@@ -144,7 +171,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border2"
-                        android:hint="Enter your password"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawableRight="@drawable/ic_baseline_visibility_off_24"
+                        android:hint="Nhập mật khẩu"
                         android:inputType="textPassword"
                         android:padding="10dp"
                         android:textSize="16sp" />
@@ -154,7 +183,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:padding="6dp"
-                        android:text="Confirm Password"
+                        android:text="Xác nhận mật khẩu"
                         android:textColor="@color/themeColor"
                         android:textSize="16sp" />
 
@@ -163,21 +192,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/border2"
-                        android:hint="Re-enter the password"
+                        android:hint="Xác nhận mật khẩu"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawableRight="@drawable/ic_baseline_visibility_off_24"
                         android:inputType="textPassword"
                         android:padding="10dp"
                         android:textSize="16sp" />
 
                     <Button
-                        android:id="@+id/btn_login"
+                        android:id="@+id/btn_register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/editText_login_doctor_password"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginTop="50dp"
-                        android:layout_marginRight="70dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="60dp"
                         android:background="@drawable/background_patientp2"
-                        android:text="Register"
+                        android:text="Đăng ký"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -186,7 +216,7 @@
                         android:textStyle="bold"
                         android:textColor="@color/themeColor"
                         android:textSize="17sp"
-                        android:text="Already have an account?"
+                        android:text="Bạn đã có tài khoản đăng nhập"
                         android:layout_marginTop="@dimen/loginViewsMargin"
                         android:onClick="onLoginClick"/>
 
@@ -212,7 +242,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/whiteTextColor"
-                    android:text="Use other Methods"
+                    android:text="Phương thức đăng kí khác"
                     android:layout_weight="6"
                     android:textSize="12sp"
                     android:textAlignment="center"/>
@@ -310,4 +340,11 @@
         android:layout_marginBottom="30dp"
         android:onClick="onLoginClick"
         android:adjustViewBounds="false"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/progress_bar"
+        android:visibility="gone" />
 </RelativeLayout>
